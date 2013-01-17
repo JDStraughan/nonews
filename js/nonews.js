@@ -1,6 +1,6 @@
 /*
-    json_parse.js
-    2012-06-20
+    nonews.js
+    2013-01-16
 
     Public Domain.
 
