@@ -1,0 +1,20 @@
+{
+	"name": "No News (is Good News!)",
+	"manifest_version": 2,
+	"version": "0.1",   
+	"description": "Warns you of news pages that may ruin your day ;)",
+	"browser_action": {
+		"default_title": "No News (is Good News!)",
+		"default_popup": "html/popup.html"
+	},
+	"permissions": [
+	    "tabs", "http://*/", "https://*/"
+	],
+	"web_accessible_resources" : ["assets/blacklist.json"],
+	"content_scripts": [
+	  {
+	    "matches": ["<all_urls>"],
+	    "js": ["js/json_parse.js", "js/nonews.js"]
+	  }
+	]
+}
