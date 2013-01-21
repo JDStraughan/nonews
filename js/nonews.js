@@ -1,6 +1,5 @@
 /*
     nonews.js
-    2013-01-16
 
     Public Domain.
 

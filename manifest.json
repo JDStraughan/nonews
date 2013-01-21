@@ -16,7 +16,7 @@
 		"default_popup": "html/popup.html"
 	},
 	"permissions": [
-	    "webRequest", "webRequestBlocking", "tabs", "http://*/", "https://*/"
+	    "webRequest", "webRequestBlocking", "http://*/", "https://*/"
 	],
   "background": {
     "scripts": ["js/json_parse.js", "js/nonews.js"]
