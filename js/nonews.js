@@ -13,32 +13,21 @@ var xmlreq = new XMLHttpRequest();
 xmlreq.open("GET", fileURL, false);
 xmlreq.send();
 
-//The file should be in xmlreq.responseText array
+// The file should be in xmlreq.responseText array
 var blacklist = json_parse(xmlreq.responseText);
 
-// Init showConfirm to false
-var showConfirm = false;
-
-// Iterate blacklist hostnames and see if we have a match
-for (var i = 0; i < blacklist.hostnames.length; i++) {
-	if (location.hostname.indexOf(blacklist.hostnames[i]) > -1) {
-		showConfirm = true;
-	}
-}
-
-// If there were matches, show the confirmation dialog
-if (showConfirm == true) {
-	showConfirmDialog();
-}
-
-// Displays confirm dialog and handles action
-function showConfirmDialog() {
-	var r=confirm("***WARNING!***\n\nThis is a news site, and the content is probably not worth your time.\n\nAre you sure you wish to continue?");
-	if (r==false) {
-		if (history.length > 1) {
-	  		history.back();
-		} else {
-			window.close();
+// Add the event listener with filters
+chrome.webRequest.onBeforeRequest.addListener(
+  function(tab) {
+		return { 
+			redirectUrl: 'http://jdstraughan.github.com/nonews/blocked-site.html' 
 		}
-	}
-}
+  },
+  // filters
+  {
+    urls: blacklist.urls,
+    types: ["main_frame"]
+  },
+  // extratabSpec
+  ["blocking"]
+);
