@@ -19,7 +19,7 @@ var blacklist = json_parse(xmlreq.responseText);
 chrome.webRequest.onBeforeRequest.addListener(
   function(tab) {
 		return { 
-			redirectUrl: 'http://jdstraughan.github.com/nonews/blocked-site.html' 
+			redirectUrl: 'http://www.nonews.info/blocked-site.html' 
 		}
   },
   // filters
