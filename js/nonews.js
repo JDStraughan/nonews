@@ -14,7 +14,7 @@ if (typeof localStorage.nonews_blacklist_urls === "undefined") {
   xmlreq.send();
 
   // The file should be in xmlreq.responseText array
-  blacklist = json_parse(xmlreq.responseText);
+  blacklist = JSON.parse(xmlreq.responseText);
   localStorage.nonews_blacklist_urls = JSON.stringify(blacklist.urls);
 }
 

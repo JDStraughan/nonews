@@ -19,6 +19,6 @@
 	    "webRequest", "webRequestBlocking", "http://*/", "https://*/"
 	],
   "background": {
-    "scripts": ["js/json_parse.js", "js/nonews.js"]
+    "scripts": ["js/nonews.js"]
   }
 }
