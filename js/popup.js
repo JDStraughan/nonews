@@ -4,11 +4,11 @@ setSnoozedClass(now, snooze_end);
 var el = document.getElementById("nonews_snooze"); 
 
 if (el) {
-  el.addEventListener("click", function() { snooze(el, now, snooze_end) }); 
+  el.addEventListener("click", function() { snooze(now, snooze_end) }); 
 }
 
 // Set the snooze period to stop filter from blocking sites
-function snooze(el, now, snooze_end) {
+function snooze(now, snooze_end) {
   
   // Do nothing if stored is still valid
   if (snooze_end > now) {
