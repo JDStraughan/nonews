@@ -27,7 +27,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     }
     // Check for snooze option
     now = new Date().getTime();
-    if (localStorage.nonews_temp_bypass > now) {
+    if (localStorage.nonews_snooze_end > now) {
       return;
     }
     // Redirect to blocked site page, passing url for bypass option
