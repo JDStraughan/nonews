@@ -18,9 +18,16 @@ var blacklist = json_parse(xmlreq.responseText);
 // Add the event listener with filters
 chrome.webRequest.onBeforeRequest.addListener(
   function(tab) {
+		// Check for manual bypass via query string
 		if (tab.url.indexOf("nonews_bypass=true") > 0) {
 			return;
 		}
+		// Check for snooze option
+		now = new Date().getTime();
+		if (localStorage.nonoews_temp_bypass > now) {
+			return;
+		}
+		// Redirect to blocked site page, passing url for bypass option
 		return { 
 			redirectUrl: 'http://www.nonews.info/blocked-site.html?site=' + tab.url
 		}
