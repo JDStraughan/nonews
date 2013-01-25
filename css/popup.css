@@ -1,0 +1,15 @@
+#popup {
+	width: 320px;
+	margin: 10px;
+}
+button {
+	font-size: 14px;
+	padding: 5px 7px;
+}
+.centered {
+	text-align: center;
+}
+.snoozing {
+	font-weight: bold;
+	color: red;
+}
