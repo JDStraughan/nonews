@@ -18,8 +18,10 @@ var blacklist = json_parse(xmlreq.responseText);
 // Add the event listener with filters
 chrome.webRequest.onBeforeRequest.addListener(
   function(tab) {
+		console.log(tab);
+		console.log('boo');
 		return { 
-			redirectUrl: 'http://www.nonews.info/blocked-site.html' 
+			redirectUrl: 'http://www.nonews.info/blocked-site.html?site=' + tab.url
 		}
   },
   // filters
