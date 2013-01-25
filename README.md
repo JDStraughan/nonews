@@ -4,7 +4,7 @@ A simple Google Chrome extension to thwart news from ruining your day.
 
 ## Installation
 
-Visit the [Google Chrome extensions page](https://chrome.google.com/webstore/category/extensions). Voila.  
+Visit the [Google Chrome extensions page](https://chrome.google.com/webstore/detail/no-news-is-good-news/fnikidjfogfllkinoahanihoddalbhil). Click "Add to Chrome". Voila.  
 
 ## Usage
 
@@ -12,7 +12,7 @@ When you visit a page from a news site, you will be warned about how it may ruin
 
 ## Inspiration
 
-[This article](http://www.aaronsw.com/weblog/hatethenews) by [Aaron Swartz](http://en.wikipedia.org/wiki/Aaron_Swartz) made me do it.
+[This essay](http://www.aaronsw.com/weblog/hatethenews) by [Aaron Swartz](http://en.wikipedia.org/wiki/Aaron_Swartz) made me do it.
 
 ## Contributing
 
