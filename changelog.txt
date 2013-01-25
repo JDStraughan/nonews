@@ -1,0 +1,7 @@
+v0.2.2 - Added 6K+ new sites to blacklist, using www.nonews.info
+
+v0.2.1 - Only for chrome happiness
+
+v0.2 - Got icon sizes right
+
+v0.1 - Initial coding for proof of concept and learning extensions ;)

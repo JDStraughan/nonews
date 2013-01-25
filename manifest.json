@@ -1,7 +1,7 @@
 {
 	"name": "No News (is Good News!)",
 	"manifest_version": 2,
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"homepage_url" : "http://www.nonews.info",
 	"description": "Warns you of news pages that may ruin your day ;)",
 	"icons": { "16": "img/icon16.png",
