@@ -1,6 +1,6 @@
 var now = new Date().getTime();
 var snooze_end = localStorage.nonews_snooze_end;
-setSnoozedClass(now, snooze_end);
+setSnoozeContents(now, snooze_end);
 var el = document.getElementById("nonews_snooze"); 
 
 if (el) {
@@ -20,7 +20,7 @@ function snooze(now, snooze_end) {
   localStorage.nonews_snooze_end = now + 900000;
 
   // Update the class to reflect snooziness
-  setSnoozedClass(now, localStorage.nonews_snooze_end);
+  setSnoozeContents(now, localStorage.nonews_snooze_end);
 
 }
 
@@ -37,10 +37,11 @@ function snoozeTimeRemaining(now, snooze_end) {
 }
 
 // Updates the snooze container with proper html to operate snooze bar
-function setSnoozedClass(now, snooze_end) {
+function setSnoozeContents(now, snooze_end) {
   if (snooze_end > now) {
-    document.getElementById("snooze_container").innerHTML = '<span class="snoozing">NoNews is snoozing for  the next ' + snoozeTimeRemaining(now, snooze_end) + '.</span>';
+    contents = '<span class="snoozing">NoNews is snoozing for  the next ' + snoozeTimeRemaining(now, snooze_end) + '.</span>';
   } else {
-    document.getElementById("snooze_container").innerHTML = '<button id="nonews_snooze" href="#">Snooze NoNews Filtering for 15 Minutes</button>';
+    contents = '<button id="nonews_snooze" href="#">Snooze NoNews Filtering for 15 Minutes</button>';
   }
+  document.getElementById("snooze_container").innerHTML = contents;
 }
