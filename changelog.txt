@@ -1,3 +1,5 @@
+v0.5 - Refactoring code & blacklist updates
+
 v0.4 - Moved blocked site list into localStorage
      - Added ability to snooze filter
 
